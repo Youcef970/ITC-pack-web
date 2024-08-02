@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- DyCalendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dycalendarjs@1.2.1/css/dycalendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styleC.css">
+</head>
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-search">
+                <span class="material-icons-outlined">search</span>
+                <input type="text" placeholder="Search now">
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">groups</span> Participants
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">dashboard_customize</span> Classification
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" target="_blank" id="logout">
+                        <span class="material-icons-outlined">logout</span> Log out
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+          <section class="dashboard">
+              <h1>Dashboard</h1>
+              <p>Welcome to task management dashboard</p>
+              <div class="main-content">
+                  <div class="left-content">
+                      <div class="welcome-banner">
+                          <img src="Honstly-work-banner-2 1.png" alt="Character Illustration">
+                          <div class="welcome-text">
+                              <h3>Hi, Badji Kaouther</h3>
+                              <h2>Welcome Back!</h2>
+                              <p>Project activity and statistic will be updated here.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="right-content">
+                      <h1>Calendar</h1>
+                      <div class="dycalendar" id="dycalendar"></div>
+                  </div>
+              </div>
+          </section>
+      </main>
+      
+        <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- DyCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dycalendarjs@1.2.1/js/dycalendar.js"></script>
+    <script src="scriptC.js"></script>
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Custom JS Calendar-->
+    <script src="scriptC.js"></script>
+</body>
+</html>

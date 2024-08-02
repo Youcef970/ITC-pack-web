@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+
+
+.container {
+    width: 336px;
+    height: 340.39px;
+    padding: 26.35px 0px 0px 0px;
+    gap: 24.16px;
+    border-radius: 8.78px 0px 0px 0px;
+    opacity: 1;
+}
+
+.dycalendar {
+    width: 100%;
+    background: white;
+    border-radius: 0; /* Remove rounded corners */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove box shadow */
+    overflow: hidden;
+  }
+  
+
+.dycalendar table {
+    margin: 10px auto;
+    width: calc(100% - 20px); /* Ensure table fits within the container */
+    border-spacing: 5px;
+}
+
+.dycalendar table tr:first-child td {
+    color: grey;
+}
+
+.dycalendar table td {
+    height: 40px; /* Adjusted height */
+    width: 40px; /* Adjusted width */
+    border-radius: 5px;
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-align: center; /* Centered text */
+    vertical-align: middle; /* Centered text */
+    line-height: 40px; /* Adjusted line height */
+}
+
+.dycalendar table td:hover {
+    background: rgba(192, 192, 192, 0.3);
+    transition: all .2s ease-out;
+}
+
+.dycalendar-month-container {
+    font-size: 20px; /* Adjusted font size */
+    text-align: center; /* Centered text */
+}
+
+.dycalendar-prev-next-btn.next-btn, .prev-btn {
+    padding: 5px 10px; /* Adjusted padding */
+    background: none;
+    color: black;
+    border-radius: 10px;
+    margin: 0 5px; /* Adjusted margin */
+    font-size: 14px; /* Adjusted font size */
+}
+
+.dycalendar .next-btn {
+    margin-right: 10px;
+}
+
+.dycalendar-prev-next-btn.next-btn:hover, .dycalendar-prev-next-btn.prev-btn:hover {
+    background: #F5F5F5;
+}
+
+.dycalendar .dycalendar-today-date {
+    background:#B81D25;
+    border-radius: 10px;
+    color: white;
+}
+
+.dycalendar .dycalendar-today-date:hover {
+    background: #4fa2f5;
+}
+
+.dycalendar-header {
+    font-family: 'Poppins', sans-serif;
+    text-align: center; /* Centered text */
+    margin-bottom: 10px;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.calendar-container {
+    flex-shrink: 0;
+    width: 350px; /* Adjust width as needed */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e6e8ed;
+    color: #666666;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    color: #171E25;
+}
+
+.material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+}
+
+.text-primary {
+    color: #666666;
+}
+
+.text-blue {
+    color: #246dec;
+}
+
+.text-red {
+    color: #cc3c43;
+}
+
+.text-green {
+    color: #367952;
+}
+
+.text-orange {
+    color: #f5b74f;
+}
+
+.font-weight-bold {
+    font-weight: 600;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main";
+    height: 100vh;
+}
