@@ -1,14 +1,16 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #e6e8ed;
   color: #666666;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif; /* Change to Roboto */
 }
 
 h1 {
   color: #171E25;
+  font-family: "Roboto", sans-serif; /* Optional: Ensure specific elements also use Roboto */
 }
 
 .material-icons-outlined {
@@ -40,6 +42,7 @@ h1 {
   font-weight: 600;
 }
 
+/* Grid Container */
 .grid-container {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -51,8 +54,7 @@ h1 {
   overflow: hidden; /* Prevent overflow on the grid container itself */
 }
 
-/* ---------- HEADER ---------- */
-
+/* Header */
 .header {
   grid-area: header;
   height: 70px; /* Fixed height for the header */
@@ -95,8 +97,7 @@ h1 {
   margin-left: 0.5rem;
 }
 
-/* ---------- SIDEBAR ---------- */
-
+/* Sidebar */
 #sidebar {
   grid-area: sidebar;
   height: 100%;
@@ -165,8 +166,7 @@ ul {
   height: 95%;
 }
 
-/* ---------- MAIN ---------- */
-
+/* Main Content */
 .main-container {
   grid-area: main;
   overflow-y: auto; /* Allow vertical scrolling */
@@ -175,7 +175,6 @@ ul {
   height: calc(100vh - 70px); /* Adjust height to accommodate header */
   box-sizing: border-box; /* Include padding in height calculation */
 }
-
 
 .dashboard {
   padding: 20px;
@@ -190,18 +189,26 @@ ul {
   box-shadow: none; 
   border-radius: 0; 
   margin-left: 0; 
+  position: relative;
+  bottom: 100px;
+  left: 80px;
 }
-
 
 .main-content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
 }
 
 .left-content {
   flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
 }
 
+.event-summary-container {
+  margin-top: 20px; /* Space between welcome-text and event summary */
+}
 
 .welcome-banner {
   display: flex;
@@ -211,8 +218,8 @@ ul {
   background: linear-gradient(130.66deg, #909DAA -23.4%, #192128 108.74%);
   border-radius: 20px;
   color: white;
-  width: 691px;
-  height: 192px;
+  width: 100%; /* Ensure full width */
+  height: auto; /* Adjust height to content */
 }
 
 .welcome-banner img {
@@ -231,17 +238,64 @@ ul {
   color: #171E25;
 }
 
-.main-title {
+.box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  gap: 20px;
 }
 
-.main-title > p {
-  font-size: 20px;
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F4F5F7;
+  border-radius: 10px;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.icon-groups, .icon-finance-mode, .icon-space-dashboard {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
 
-/* ---------- MEDIA QUERIES ---------- */
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.icon-groups {
+  width: 26px;
+  height: 24px;
+  color: #D27C2C;
+}
+
+.icon-finance-mode {
+  width: 26px;
+  height: 26px;
+  color: #9747FF;
+}
+
+.icon-space-dashboard {
+  width: 26px;
+  height: 26px;
+  color: #4ECB71;
+}
+
+/* Media Queries */
 
 /* Medium <= 992px */
 @media screen and (max-width: 992px) {
@@ -274,6 +328,66 @@ ul {
     margin-top: 20px;
   }
 }
+
+.right-content, h1 {
+  display: inline;
+}
+
+.view-all {
+  display: inline;
+  color: #B81D25;
+  text-decoration: none;
+  left: 1312px;
+  position: relative;
+  top: -5px;
+  left: 200px;
+}
+.schedule-item {
+  width: 338px;
+  height: 50px;
+  gap: 0px;
+  border-radius: 30px;
+  opacity: 0.8; /* Adjusted opacity for visibility */
+  background: linear-gradient(130.66deg, rgba(54, 63, 71, 0.7656) 26.81%, rgba(144, 157, 170, 0.88) 86.94%);
+  position: relative; /* Ensure the positioning works */
+  top: 25px;
+  margin-bottom: 10px; /* Space between items */
+  display: flex;
+  flex-direction: column; /* Stack h3 and p vertically */
+  align-items: center;
+  justify-content: center; /* Center content */
+  padding: 10px; /* Add padding for content alignment */
+  color: white; /* Ensure text is readable */
+  font-size: 16px; /* Adjust font size if needed */
+  text-align: center; /* Center text */
+}
+
+.schedule-item h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.schedule-item p {
+  margin: 0; /* Remove margin to reduce space between h3 and p */
+  font-size: 14px; /* Adjust font size if needed */
+}
+.add{
+  text-align: center;
+  position: relative;
+  top: 30px;
+  left: 150px;
+}
+#plus {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 8px; /* Space between the icon and text */
+  color: #000; /* Text color */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+#plus .material-symbols-outlined {
+  font-size: 24px; /* Adjust icon size as needed */
+}
+
 
 /* Small <= 768px */
 @media screen and (max-width: 768px) {
